@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — E.M.P.O.W.E.R</title>
+  <meta name="description" content="Privacy Policy for the E.M.P.O.W.E.R sari-sari store management application. Learn how we handle your data, including Google API Limited Use compliance.">
+  <meta property="og:title" content="Privacy Policy — E.M.P.O.W.E.R">
+  <meta property="og:description" content="How E.M.P.O.W.E.R handles your data, including Google API Limited Use compliance and data deletion instructions.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dswd-slp-empower.github.io/empower/privacy.html">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header" role="banner">
+  <div class="container">
+    <a href="index.html" class="site-header__brand" aria-label="EMPOWER">
+      E<span class="brand__dot" aria-hidden="true"></span>M<span class="brand__dot" aria-hidden="true"></span>P<span class="brand__dot" aria-hidden="true"></span>O<span class="brand__dot" aria-hidden="true"></span>W<span class="brand__dot" aria-hidden="true"></span>E<span class="brand__dot" aria-hidden="true"></span>R
+      <span class="site-header__subtitle">Sari-Sari Store Manager</span>
+    </a>
+    <nav class="site-header__nav" role="navigation" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="privacy.html" aria-current="page">Privacy</a>
+      <a href="terms.html">Terms</a>
+    </nav>
+  </div>
+</header>
+
+<main role="main">
+  <div class="container container--narrow main-content">
+
+    <div class="page-header">
+      <h1>Privacy Policy</h1>
+      <p class="effective-date">Effective Date: July 23, 2026</p>
+    </div>
+
+    <div class="card">
+      <p>DSWD SLP Team, BSIT Batch 2027 — CTU Ginatilan Extension Campus (&ldquo;we,&rdquo; &ldquo;our,&rdquo; or &ldquo;us&rdquo;) operate the E.M.P.O.W.E.R mobile application (the &ldquo;App&rdquo;). This Privacy Policy explains how the App handles information when you use it.</p>
+      <p>E.M.P.O.W.E.R is an <strong>offline-first</strong> application. All core features work without internet access. The App stores data locally on your device using SQLite and may optionally upload backup archives to Google Drive.</p>
+      <p>By using the App, you agree to the practices described in this policy.</p>
+    </div>
+
+    <div class="card">
+      <h2 class="section-header section-header--first" style="margin-bottom: 1rem;">Contents</h2>
+      <ol class="toc">
+        <li class="toc__item"><a href="#section-1"><span class="toc__num">1.</span> Information We Collect and Store</a></li>
+        <li class="toc__item"><a href="#section-2"><span class="toc__num">2.</span> How We Use Information</a></li>
+        <li class="toc__item"><a href="#section-3"><span class="toc__num">3.</span> Google API Services — Limited Use Disclosure</a></li>
+        <li class="toc__item"><a href="#section-4"><span class="toc__num">4.</span> Data Storage and Security</a></li>
+        <li class="toc__item"><a href="#section-5"><span class="toc__num">5.</span> Data Retention and Deletion</a></li>
+        <li class="toc__item"><a href="#section-6"><span class="toc__num">6.</span> Third-Party Services</a></li>
+        <li class="toc__item"><a href="#section-7"><span class="toc__num">7.</span> Children&rsquo;s Privacy</a></li>
+        <li class="toc__item"><a href="#section-8"><span class="toc__num">8.</span> Changes to This Privacy Policy</a></li>
+        <li class="toc__item"><a href="#section-9"><span class="toc__num">9.</span> Contact Us</a></li>
+      </ol>
+    </div>
+
+    <section class="card" id="section-1">
+      <h2 class="section-header section-header--first">1. Information We Collect and Store</h2>
+
+      <h3 class="section-header--sm">1.1 Information You Provide</h3>
+      <p>The App stores the following information locally on your device when you create accounts, add members, record transactions, or manage customers:</p>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Data</th>
+              <th>Location</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Association Account</td>
+              <td>SLPA name, full name, mobile number, 4-digit PIN, security question and answer, profile image</td>
+              <td>Local SQLite database + filesystem</td>
+            </tr>
+            <tr>
+              <td>Member Profile</td>
+              <td>Full name, mobile number, 4-digit PIN, security question and answer</td>
+              <td>Local SQLite database</td>
+            </tr>
+            <tr>
+              <td>Customer Records</td>
+              <td>Full name, phone number, municipality, barangay, landmark, credit limit</td>
+              <td>Local SQLite database</td>
+            </tr>
+            <tr>
+              <td>Transaction Data</td>
+              <td>Sales, expenses, inventory lots, stock adjustments, payments, capital movements, audit logs</td>
+              <td>Local SQLite database</td>
+            </tr>
+            <tr>
+              <td>Images</td>
+              <td>Product images, profile photos, expense receipts</td>
+              <td>Local filesystem</td>
+            </tr>
+            <tr>
+              <td>Backup Configuration</td>
+              <td>Google Account ID, Google Account email, folder identifiers</td>
+              <td>Local SQLite database (<code>backup_settings</code> table)</td>
+            </tr>
+            <tr>
+              <td>Session &amp; Settings</td>
+              <td>Current member ID, account ID, names, zoom level, credit rate preferences</td>
+              <td>SharedPreferences (local)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="section-header--sm">1.2 Information Retrieved via Google APIs</h3>
+      <p>When you configure the Google Drive backup feature, the App accesses the following information from your Google Account:</p>
+      <ul>
+        <li><strong>Google Account ID</strong> (immutable identifier) — used to identify the configured shared account</li>
+        <li><strong>Google Account email address</strong> — displayed in the App for reference</li>
+        <li><strong>OAuth 2.0 access tokens and refresh tokens</strong> — used to authenticate Google Drive API requests. These tokens are stored in the device&rsquo;s secure hardware-backed storage (Android Keystore), <strong>not</strong> in the App&rsquo;s database.</li>
+      </ul>
+
+      <h3 class="section-header--sm">1.3 Information We Do NOT Collect</h3>
+      <p>The App does <strong>not</strong> collect:</p>
+      <ul>
+        <li>Device identifiers (IMEI, serial numbers, advertising ID)</li>
+        <li>GPS or precise location data</li>
+        <li>Contacts, call logs, or SMS data</li>
+        <li>Biometric data (fingerprint templates stay on device)</li>
+        <li>Browsing history or usage analytics</li>
+        <li>Crash reports or diagnostic logs</li>
+        <li>Any information from children under 13</li>
+      </ul>
+    </section>
+
+    <section class="card" id="section-2">
+      <h2 class="section-header">2. How We Use Information</h2>
+      <p>All information collected is used exclusively for the following purposes:</p>
+      <ul>
+        <li><strong>App Authentication:</strong> PIN verification and session management</li>
+        <li><strong>Store Operations:</strong> Recording sales, inventory, expenses, customer credit, and generating financial reports</li>
+        <li><strong>Google Drive Backup &amp; Restore:</strong> Creating encrypted-token-authenticated backup archives in Google Drive and restoring them when requested</li>
+        <li><strong>Product Alerts:</strong> Sending email notifications via EmailJS when products are edited or deleted (fire-and-forget; no personally identifiable information beyond product details is sent)</li>
+      </ul>
+    </section>
+
+    <section class="card" id="section-3">
+      <h2 class="section-header">3. Google API Services — Limited Use Disclosure</h2>
+
+      <p>The App uses Google API services (Google Sign-In and Google Drive API) solely for the backup and restore feature. The App&rsquo;s use and transfer of information received from Google APIs complies with the <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Google API Services User Data Policy</a>, including the <strong>Limited Use</strong> requirements.</p>
+
+      <h3 class="section-header--sm">3.1 OAuth Scope</h3>
+      <p>The App requests the following OAuth scope:</p>
+      <p><span class="scope-badge">https://www.googleapis.com/auth/drive.file</span></p>
+      <p>This scope grants the App access only to files and folders that it creates in Google Drive. The App <strong>cannot</strong> access any other files in your Google Drive.</p>
+
+      <h3 class="section-header--sm">3.2 Data Accessed via Google APIs</h3>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Data</th>
+              <th>How It Is Used</th>
+              <th>Storage</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Google Account ID</td>
+              <td>Verify that the authenticating user matches the configured shared account</td>
+              <td>Stored locally in <code>backup_settings</code> table</td>
+            </tr>
+            <tr>
+              <td>Google Account email</td>
+              <td>Display in backup settings for user reference</td>
+              <td>Stored locally in <code>backup_settings</code> table</td>
+            </tr>
+            <tr>
+              <td>OAuth tokens</td>
+              <td>Authenticate Drive API requests (create, list, download, delete backup files)</td>
+              <td>Android Keystore (secure hardware-backed storage) — NOT in App database</td>
+            </tr>
+            <tr>
+              <td>Backup files (ZIP archives)</td>
+              <td>Uploaded to or downloaded from the App&rsquo;s Drive folder for backup/restore</td>
+              <td>Google Drive (user&rsquo;s own storage, only within App-created folders)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="section-header--sm">3.3 Limited Use Compliance</h3>
+      <p>The App&rsquo;s use of Google user data meets Limited Use requirements because:</p>
+      <ul>
+        <li>Data obtained through Google APIs is used <strong>only</strong> to provide the backup and restore feature</li>
+        <li><strong>No data is transferred to third parties</strong> — no advertising networks, analytics providers, or data brokers</li>
+        <li><strong>No data is used for advertising, remarketing, or machine learning</strong></li>
+        <li><strong>No data is used for building user profiles</strong> or improving unrelated products</li>
+        <li>The App uses the most restrictive scope (<code>drive.file</code>) that allows the feature to function</li>
+        <li>Users can revoke access at any time via their Google Account settings or by disconnecting within the App</li>
+      </ul>
+    </section>
+
+    <section class="card" id="section-4">
+      <h2 class="section-header">4. Data Storage and Security</h2>
+
+      <h3 class="section-header--sm">4.1 Local Storage</h3>
+      <ul>
+        <li><strong>SQLite Database:</strong> The App stores all operational data in a local SQLite database file (<code>app_data.db</code>) on the device. This database is <strong>not encrypted</strong> at rest.</li>
+        <li><strong>SharedPreferences:</strong> Session and preference data are stored using Android SharedPreferences. This data is <strong>not encrypted</strong> at rest.</li>
+        <li><strong>Filesystem:</strong> User-uploaded images (profile, product, receipts) are stored in the app&rsquo;s documents directory.</li>
+        <li><strong>Android Keystore:</strong> Google OAuth tokens are stored in hardware-backed secure storage.</li>
+      </ul>
+
+      <h3 class="section-header--sm">4.2 Google Drive Storage</h3>
+      <ul>
+        <li>Backup archives are uploaded to a dedicated folder structure under the App&rsquo;s Google Drive folder: <code>EMPOWER/[Organization Name]/backup_*.zip</code></li>
+        <li>Backup archives are <strong>ZIP files that are not encrypted</strong>. Access to their content is controlled solely by Google Drive permissions.</li>
+        <li>Each backup contains: the full SQLite database, user-uploaded images, and a metadata JSON file.</li>
+        <li>The App retains the latest 10 backups per organization; older backups are automatically deleted.</li>
+      </ul>
+
+      <h3 class="section-header--sm">4.3 PIN Storage Disclosure</h3>
+      <p>4-digit PINs are stored as <strong>plain text</strong> in the local SQLite database. This is a known limitation of the current implementation. PINs are never transmitted over a network or uploaded to any server (except as part of a full database backup archive uploaded to Google Drive).</p>
+    </section>
+
+    <section class="card" id="section-5">
+      <h2 class="section-header">5. Data Retention and Deletion</h2>
+
+      <h3 class="section-header--sm">5.1 Local Data</h3>
+      <ul>
+        <li>Local data persists on the device until you delete it using the App&rsquo;s &ldquo;Clear All Data&rdquo; function or uninstall the App.</li>
+        <li>The &ldquo;Clear All Data&rdquo; function removes all operational data (products, inventory, sales, expenses, customers, transactions) while preserving the App&rsquo;s schema for a fresh start.</li>
+        <li>Uninstalling the App removes the local SQLite database, SharedPreferences, and app-specific files.</li>
+      </ul>
+
+      <h3 class="section-header--sm">5.2 Google Drive Backups</h3>
+      <ul>
+        <li>Backup archives remain in your Google Drive until you delete them or the App&rsquo;s automatic retention (latest 10) removes older ones.</li>
+        <li>Disconnecting the App from Google Drive stops future backups but does <strong>not</strong> delete existing backup archives from Drive.</li>
+      </ul>
+
+      <h3 class="section-header--sm">5.3 How to Delete Your Data</h3>
+      <ol>
+        <li><strong>Delete all local App data:</strong> Open the App, navigate to Settings &rarr; Clear All Data. This removes all local operational data.</li>
+        <li><strong>Delete Google Drive backups:</strong> Open the App&rsquo;s Backup Settings &rarr; disconnect Google Drive, then visit <a href="https://drive.google.com" target="_blank" rel="noopener">drive.google.com</a> and delete the &ldquo;EMPOWER&rdquo; folder to remove all backup archives. Alternatively, you can delete individual backup files from within the App&rsquo;s restore screen.</li>
+        <li><strong>Revoke Google Account access:</strong> Visit your <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">Google Account permissions page</a> and revoke access for the E.M.P.O.W.E.R application. This immediately prevents the App from accessing your Google Drive.</li>
+        <li><strong>Uninstall the App:</strong> Removing the App from your device deletes all locally stored data.</li>
+      </ol>
+    </section>
+
+    <section class="card" id="section-6">
+      <h2 class="section-header">6. Third-Party Services</h2>
+      <p>The App integrates with the following third-party services:</p>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Service</th>
+              <th>Purpose</th>
+              <th>Data Shared</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Google Sign-In &amp; Google Drive API</strong></td>
+              <td>OAuth authentication and backup/restore file operations</td>
+              <td>Google Account ID, email, and backup file contents (database, images, metadata). See Section 3 for details.</td>
+            </tr>
+            <tr>
+              <td><strong>EmailJS</strong></td>
+              <td>Send email alerts when products are edited or deleted</td>
+              <td>Product name, action type (edited/deleted), member name, association name, changes made, and timestamp. No personal contact information is shared.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>These third parties have their own privacy policies governing the use of data they receive. We encourage you to review them.</p>
+    </section>
+
+    <section class="card" id="section-7">
+      <h2 class="section-header">7. Children&rsquo;s Privacy</h2>
+      <p>The App is not directed at children under the age of 13. We do not knowingly collect personal information from children under 13. If you believe a child has provided personal information through the App, please contact us so we can delete it.</p>
+    </section>
+
+    <section class="card" id="section-8">
+      <h2 class="section-header">8. Changes to This Privacy Policy</h2>
+      <p>We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated effective date. We encourage you to review this policy periodically.</p>
+    </section>
+
+    <section class="card" id="section-9">
+      <h2 class="section-header">9. Contact Us</h2>
+      <p>If you have questions, concerns, or requests regarding this Privacy Policy or the App&rsquo;s data practices, please contact us:</p>
+      <ul>
+        <li><strong>Developers:</strong> DSWD SLP Team, BSIT Batch 2027 — CTU Ginatilan Extension Campus</li>
+        <li><strong>Email:</strong> <a href="mailto:dswdslpempower@gmail.com">dswdslpempower@gmail.com</a></li>
+      </ul>
+    </section>
+
+  </div>
+</main>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <p>&copy; 2026 DSWD SLP Team, BSIT Batch 2027 — CTU Ginatilan Extension Campus. All rights reserved.</p>
+    <nav class="site-footer__links" aria-label="Footer navigation">
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
